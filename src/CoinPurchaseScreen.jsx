@@ -25,7 +25,7 @@ import ErrorIcon from "@mui/icons-material/Error";
 import WarningIcon from "@mui/icons-material/Warning";
 import CloseIcon from "@mui/icons-material/Close";
 import coinPackage from "./assets/coinPackage.svg";
-import Coin from "./assets/coin.svg";
+import Coin from "./assets/Coin.svg";
 import axios from "axios";
 
 const StyledDialog = styled(Dialog)(({ theme }) => ({
