@@ -24,6 +24,8 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ErrorIcon from "@mui/icons-material/Error";
 import WarningIcon from "@mui/icons-material/Warning";
 import CloseIcon from "@mui/icons-material/Close";
+import coinPackage from "./assets/coinPackage.svg";
+import Coin from "./assets/coin.svg";
 import axios from "axios";
 
 const StyledDialog = styled(Dialog)(({ theme }) => ({
@@ -260,16 +262,35 @@ const CoinPurchaseScreen = () => {
               >
                 <CardContent>
                   <Box sx={{ textAlign: "center" }}>
+                    <img src={coinPackage} />
                     <Box
                       sx={{
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
+                        gap: 0.6,
                         mb: 1,
+                        width: "120px",
+                        marginInline: "auto",
+                        my: 0.8,
+                        background:
+                          selectedPackage?._id === pkg._id
+                            ? "#fff"
+                            : "linear-gradient(90deg, #EC008C 0%, #FC6767 100%)",
+                        color:
+                          selectedPackage?._id === pkg._id ? "black" : "white",
+                        borderRadius: "10px",
+                        boxShadow: "1px 1px 2px 0px rgba(70, 75, 216, 0.28)",
                       }}
                     >
-                      <MonetizationOnIcon sx={{ color: "gold", mr: 0.5 }} />
-                      <Typography variant="h6" component="span">
+                      <img
+                        src={Coin}
+                        style={{
+                          width: "25px",
+                          display: "block",
+                        }}
+                      />
+                      <Typography variant="h6" component="span" mt={"2px"}>
                         {pkg.coin}
                       </Typography>
                     </Box>
